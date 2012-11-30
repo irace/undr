@@ -1,6 +1,7 @@
 *~
 
 #Ignore user-specific settings
+xcuserdata
 *.mode1v3
 *.mode2v3
 *.pbxuser
