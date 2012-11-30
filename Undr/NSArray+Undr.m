@@ -11,14 +11,44 @@
 @implementation NSArray (Undr)
 
 - (void)each:(void(^)(id))block {
-    for (id object in self)
-        block(object);
+    for (id object in self) block(object);
 }
 
 - (NSArray *)map:(id(^)(id))block {
     NSMutableArray *result = [NSMutableArray array];
     
     for (id object in self) [result addObject:block(object)];
+    
+    return result;
+}
+
+- (id)reduce:(id(^)(id, id))block memo:(id)memo {
+    id result = memo;
+    
+    for (id object in self) result = block(memo, object);
+    
+    return result;
+}
+
+- (id)reduceRight:(id(^)(id, id))block memo:(id)memo {
+    NSEnumerator *enumerator = [self reverseObjectEnumerator];
+    id result = memo;
+    
+    for (id object in enumerator) result = block(memo, object);
+    
+    return result;
+}
+
+- (id)find:(BOOL(^)(id))block {
+    for (id object in self) if (block(self)) return self;
+    
+    return nil;
+}
+
+- (NSArray *)filter:(BOOL(^)(id))block {
+    NSMutableArray *result = [NSMutableArray array];
+    
+    for (id object in self) if (block(object)) [result addObject:self];
     
     return result;
 }

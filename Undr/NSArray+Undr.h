@@ -14,4 +14,12 @@
 
 - (NSArray *)map:(id(^)(id))block;
 
+- (id)reduce:(id(^)(id, id))block memo:(id)memo;
+
+- (id)reduceRight:(id(^)(id, id))block memo:(id)memo;
+
+- (id)find:(BOOL(^)(id))block;
+
+- (NSArray *)filter:(BOOL(^)(id))block;
+
 @end
