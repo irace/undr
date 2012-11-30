@@ -31,10 +31,9 @@
 }
 
 - (id)reduceRight:(id(^)(id, id))block memo:(id)memo {
-    NSEnumerator *enumerator = [self reverseObjectEnumerator];
     id result = memo;
     
-    for (id object in enumerator) result = block(memo, object);
+    for (id object in [self reverseObjectEnumerator]) result = block(memo, object);
     
     return result;
 }
