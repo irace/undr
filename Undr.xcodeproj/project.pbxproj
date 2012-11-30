@@ -1,0 +1,411 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		93C9FEBA1669307200D7CCBB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93C9FEB91669307100D7CCBB /* Foundation.framework */; };
+		93C9FEC91669307200D7CCBB /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93C9FEC81669307200D7CCBB /* SenTestingKit.framework */; };
+		93C9FECB1669307200D7CCBB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93C9FECA1669307200D7CCBB /* UIKit.framework */; };
+		93C9FECC1669307200D7CCBB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93C9FEB91669307100D7CCBB /* Foundation.framework */; };
+		93C9FECF1669307200D7CCBB /* libUndr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 93C9FEB61669307100D7CCBB /* libUndr.a */; };
+		93C9FED51669307200D7CCBB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 93C9FED31669307200D7CCBB /* InfoPlist.strings */; };
+		93C9FED81669307200D7CCBB /* UndrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C9FED71669307200D7CCBB /* UndrTests.m */; };
+		93C9FEE61669315900D7CCBB /* NSArray+Undr.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C9FEE51669315900D7CCBB /* NSArray+Undr.m */; };
+		93C9FEE71669315900D7CCBB /* NSArray+Undr.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C9FEE51669315900D7CCBB /* NSArray+Undr.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		93C9FECD1669307200D7CCBB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 93C9FEAD1669307100D7CCBB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 93C9FEB51669307100D7CCBB;
+			remoteInfo = Undr;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		93C9FEB41669307100D7CCBB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		93C9FEB61669307100D7CCBB /* libUndr.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libUndr.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		93C9FEB91669307100D7CCBB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		93C9FEBD1669307200D7CCBB /* Undr-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Undr-Prefix.pch"; sourceTree = "<group>"; };
+		93C9FEC71669307200D7CCBB /* UndrTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UndrTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		93C9FEC81669307200D7CCBB /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		93C9FECA1669307200D7CCBB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		93C9FED21669307200D7CCBB /* UndrTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UndrTests-Info.plist"; sourceTree = "<group>"; };
+		93C9FED41669307200D7CCBB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		93C9FED61669307200D7CCBB /* UndrTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UndrTests.h; sourceTree = "<group>"; };
+		93C9FED71669307200D7CCBB /* UndrTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UndrTests.m; sourceTree = "<group>"; };
+		93C9FEE41669315900D7CCBB /* NSArray+Undr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Undr.h"; sourceTree = "<group>"; };
+		93C9FEE51669315900D7CCBB /* NSArray+Undr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Undr.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		93C9FEB31669307100D7CCBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93C9FEBA1669307200D7CCBB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93C9FEC31669307200D7CCBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93C9FEC91669307200D7CCBB /* SenTestingKit.framework in Frameworks */,
+				93C9FECB1669307200D7CCBB /* UIKit.framework in Frameworks */,
+				93C9FECC1669307200D7CCBB /* Foundation.framework in Frameworks */,
+				93C9FECF1669307200D7CCBB /* libUndr.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		93C9FEAB1669307100D7CCBB = {
+			isa = PBXGroup;
+			children = (
+				93C9FEBB1669307200D7CCBB /* Undr */,
+				93C9FED01669307200D7CCBB /* UndrTests */,
+				93C9FEB81669307100D7CCBB /* Frameworks */,
+				93C9FEB71669307100D7CCBB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		93C9FEB71669307100D7CCBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				93C9FEB61669307100D7CCBB /* libUndr.a */,
+				93C9FEC71669307200D7CCBB /* UndrTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		93C9FEB81669307100D7CCBB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				93C9FEB91669307100D7CCBB /* Foundation.framework */,
+				93C9FEC81669307200D7CCBB /* SenTestingKit.framework */,
+				93C9FECA1669307200D7CCBB /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		93C9FEBB1669307200D7CCBB /* Undr */ = {
+			isa = PBXGroup;
+			children = (
+				93C9FEE41669315900D7CCBB /* NSArray+Undr.h */,
+				93C9FEE51669315900D7CCBB /* NSArray+Undr.m */,
+				93C9FEBC1669307200D7CCBB /* Supporting Files */,
+			);
+			path = Undr;
+			sourceTree = "<group>";
+		};
+		93C9FEBC1669307200D7CCBB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				93C9FEBD1669307200D7CCBB /* Undr-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		93C9FED01669307200D7CCBB /* UndrTests */ = {
+			isa = PBXGroup;
+			children = (
+				93C9FED61669307200D7CCBB /* UndrTests.h */,
+				93C9FED71669307200D7CCBB /* UndrTests.m */,
+				93C9FED11669307200D7CCBB /* Supporting Files */,
+			);
+			path = UndrTests;
+			sourceTree = "<group>";
+		};
+		93C9FED11669307200D7CCBB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				93C9FED21669307200D7CCBB /* UndrTests-Info.plist */,
+				93C9FED31669307200D7CCBB /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		93C9FEB51669307100D7CCBB /* Undr */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93C9FEDB1669307200D7CCBB /* Build configuration list for PBXNativeTarget "Undr" */;
+			buildPhases = (
+				93C9FEB21669307100D7CCBB /* Sources */,
+				93C9FEB31669307100D7CCBB /* Frameworks */,
+				93C9FEB41669307100D7CCBB /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Undr;
+			productName = Undr;
+			productReference = 93C9FEB61669307100D7CCBB /* libUndr.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		93C9FEC61669307200D7CCBB /* UndrTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93C9FEDE1669307200D7CCBB /* Build configuration list for PBXNativeTarget "UndrTests" */;
+			buildPhases = (
+				93C9FEC21669307200D7CCBB /* Sources */,
+				93C9FEC31669307200D7CCBB /* Frameworks */,
+				93C9FEC41669307200D7CCBB /* Resources */,
+				93C9FEC51669307200D7CCBB /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				93C9FECE1669307200D7CCBB /* PBXTargetDependency */,
+			);
+			name = UndrTests;
+			productName = UndrTests;
+			productReference = 93C9FEC71669307200D7CCBB /* UndrTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		93C9FEAD1669307100D7CCBB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+			};
+			buildConfigurationList = 93C9FEB01669307100D7CCBB /* Build configuration list for PBXProject "Undr" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 93C9FEAB1669307100D7CCBB;
+			productRefGroup = 93C9FEB71669307100D7CCBB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				93C9FEB51669307100D7CCBB /* Undr */,
+				93C9FEC61669307200D7CCBB /* UndrTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		93C9FEC41669307200D7CCBB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93C9FED51669307200D7CCBB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		93C9FEC51669307200D7CCBB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		93C9FEB21669307100D7CCBB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93C9FEE61669315900D7CCBB /* NSArray+Undr.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93C9FEC21669307200D7CCBB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93C9FED81669307200D7CCBB /* UndrTests.m in Sources */,
+				93C9FEE71669315900D7CCBB /* NSArray+Undr.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		93C9FECE1669307200D7CCBB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 93C9FEB51669307100D7CCBB /* Undr */;
+			targetProxy = 93C9FECD1669307200D7CCBB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		93C9FED31669307200D7CCBB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93C9FED41669307200D7CCBB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		93C9FED91669307200D7CCBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		93C9FEDA1669307200D7CCBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		93C9FEDC1669307200D7CCBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/Undr.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Undr/Undr-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		93C9FEDD1669307200D7CCBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/Undr.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Undr/Undr-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		93C9FEDF1669307200D7CCBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Undr/Undr-Prefix.pch";
+				INFOPLIST_FILE = "UndrTests/UndrTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		93C9FEE01669307200D7CCBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Undr/Undr-Prefix.pch";
+				INFOPLIST_FILE = "UndrTests/UndrTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		93C9FEB01669307100D7CCBB /* Build configuration list for PBXProject "Undr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93C9FED91669307200D7CCBB /* Debug */,
+				93C9FEDA1669307200D7CCBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93C9FEDB1669307200D7CCBB /* Build configuration list for PBXNativeTarget "Undr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93C9FEDC1669307200D7CCBB /* Debug */,
+				93C9FEDD1669307200D7CCBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93C9FEDE1669307200D7CCBB /* Build configuration list for PBXNativeTarget "UndrTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93C9FEDF1669307200D7CCBB /* Debug */,
+				93C9FEE01669307200D7CCBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 93C9FEAD1669307100D7CCBB /* Project object */;
+}
