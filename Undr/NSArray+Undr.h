@@ -4,7 +4,6 @@
 //
 //  Created by Bryan Irace on 11/30/12.
 //
-//
 
 #import <Foundation/Foundation.h>
 
@@ -12,7 +11,7 @@
 
 /// http://underscorejs.org/#collections
 
-- (void)each:(void(^)(id))block;
+- (void)each:(void(^)(id, NSUInteger))block;
 
 - (NSArray *)map:(id(^)(id))block;
 
@@ -55,6 +54,7 @@
 // TODO: `toArray`
 
 // TODO: `size1`
+
 
 /// http://underscorejs.org/#arrays
 

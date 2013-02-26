@@ -4,57 +4,31 @@
 //
 //  Created by Bryan Irace on 11/30/12.
 //
-//
 
 #import "NSArray+Undr.h"
 
+#import "UNCollections.h"
+
 @implementation NSArray (Undr)
 
-- (void)each:(void(^)(id))block {
-    for (id object in self) block(object);
+- (void)each:(void(^)(id, NSUInteger))block {
+    each(self, block);
 }
 
 - (NSArray *)map:(id(^)(id))block {
-    NSMutableArray *result = [NSMutableArray array];
-    
-    [self enumerateObjectsUsingBlock:^(id object, NSUInteger index, BOOL *stop) {
-        [result addObject:block(object)];
-    }];
-    
-    return [NSArray arrayWithArray:result];
+    return map(self, block);
 }
 
 - (id)reduce:(id(^)(id, id))block memo:(id)memo {
-    __block id result = memo;
-
-    [self enumerateObjectsUsingBlock:^(id object, NSUInteger index, BOOL *stop) {
-        result = block(memo, object);
-    }];
-    
-    return result;
+    return reduce(self, block, memo);
 }
 
 - (id)reduceRight:(id(^)(id, id))block memo:(id)memo {
-    __block id result = memo;
-    
-    [self enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(id object, NSUInteger index, BOOL *stop) {
-        result = block(memo, object);
-    }];
-    
-    return result;
+    return reduceRight(self, block, memo);
 }
 
 - (id)find:(BOOL(^)(id))block {
-    __block id result = nil;
-    
-    [self enumerateObjectsUsingBlock:^(id object, NSUInteger index, BOOL *stop) {
-        if (block(self)) {
-            result = self;
-            *stop = YES;
-        }
-    }];
-
-    return result;
+    return find(self, block);
 }
 
 - (NSArray *)filter:(BOOL(^)(id))block {
@@ -188,6 +162,8 @@
     
     while ((current = va_arg(args, id)))
         [result removeObject:current];
+    
+    va_end(args);
     
     return result;
 }

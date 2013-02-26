@@ -16,6 +16,8 @@
 		93C9FED81669307200D7CCBB /* UndrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C9FED71669307200D7CCBB /* UndrTests.m */; };
 		93C9FEE61669315900D7CCBB /* NSArray+Undr.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C9FEE51669315900D7CCBB /* NSArray+Undr.m */; };
 		93C9FEE71669315900D7CCBB /* NSArray+Undr.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C9FEE51669315900D7CCBB /* NSArray+Undr.m */; };
+		93EF3F9216DC5F2000460AA1 /* UNCollections.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EF3F9116DC5F2000460AA1 /* UNCollections.m */; };
+		93EF3F9316DC5F2000460AA1 /* UNCollections.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EF3F9116DC5F2000460AA1 /* UNCollections.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		93C9FED71669307200D7CCBB /* UndrTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UndrTests.m; sourceTree = "<group>"; };
 		93C9FEE41669315900D7CCBB /* NSArray+Undr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Undr.h"; sourceTree = "<group>"; };
 		93C9FEE51669315900D7CCBB /* NSArray+Undr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Undr.m"; sourceTree = "<group>"; };
+		93EF3F9016DC5F2000460AA1 /* UNCollections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNCollections.h; sourceTree = "<group>"; };
+		93EF3F9116DC5F2000460AA1 /* UNCollections.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNCollections.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,8 @@
 			children = (
 				93C9FEE41669315900D7CCBB /* NSArray+Undr.h */,
 				93C9FEE51669315900D7CCBB /* NSArray+Undr.m */,
+				93EF3F9016DC5F2000460AA1 /* UNCollections.h */,
+				93EF3F9116DC5F2000460AA1 /* UNCollections.m */,
 				93C9FEBC1669307200D7CCBB /* Supporting Files */,
 			);
 			path = Undr;
@@ -242,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93C9FEE61669315900D7CCBB /* NSArray+Undr.m in Sources */,
+				93EF3F9216DC5F2000460AA1 /* UNCollections.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +258,7 @@
 			files = (
 				93C9FED81669307200D7CCBB /* UndrTests.m in Sources */,
 				93C9FEE71669315900D7CCBB /* NSArray+Undr.m in Sources */,
+				93EF3F9316DC5F2000460AA1 /* UNCollections.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

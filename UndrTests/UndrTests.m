@@ -8,25 +8,22 @@
 
 #import "UndrTests.h"
 
+#import "NSArray+Undr.h"
+
 @implementation UndrTests
 
-- (void)setUp
-{
-    [super setUp];
-    
-    // Set-up code here.
+// https://github.com/documentcloud/underscore/blob/master/test/collections.js
+
+#pragma mark - Each
+
+- (void)testIteratorsProvideValueAndIterationCount {
+    [@[ @1, @2, @3 ] each:^(NSNumber *number, NSUInteger index) {
+        STAssertEquals([number unsignedIntValue], index + 1,
+                       @"each iterators provide value and iteration count");
+    }];
 }
 
-- (void)tearDown
-{
-    // Tear-down code here.
-    
-    [super tearDown];
-}
-
-- (void)testExample
-{
-    STFail(@"Unit tests are not implemented yet in UndrTests");
+- (void)testHandlesProperly {
 }
 
 @end
