@@ -61,3 +61,51 @@ id find(NSArray *array, BOOL(^block)(id)) {
     
     return result;
 }
+
+NSArray *filter(NSArray *array, BOOL(^block)(id)) {
+    NSMutableArray *result = [NSMutableArray array];
+    
+    [array enumerateObjectsUsingBlock:^(id object, NSUInteger index, BOOL *stop) {
+        if (block(object))
+            [result addObject:object];
+    }];
+    
+    return [NSArray arrayWithArray:result];
+}
+
+NSArray *reject(NSArray *array, BOOL(^block)(id)) {
+    NSMutableArray *result = [NSMutableArray array];
+    
+    [array enumerateObjectsUsingBlock:^(id object, NSUInteger index, BOOL *stop) {
+        if (!block(object))
+            [result addObject:object];
+    }];
+    
+    return result;
+}
+
+BOOL *every(NSArray *array, BOOL(^block)(id)) {
+    __block BOOL result = YES;
+    
+    [array enumerateObjectsUsingBlock:^(id object, NSUInteger index, BOOL *stop) {
+        if (!block(object)) {
+            result = NO;
+            *stop = YES;
+        }
+    }];
+    
+    return result;
+}
+
+BOOL *some(NSArray *array, BOOL(^block)(id)) {
+    __block BOOL result = NO;
+    
+    [array enumerateObjectsUsingBlock:^(id object, NSUInteger index, BOOL *stop) {
+        if (!block(object)) {
+            result = YES;
+            *stop = YES;
+        }
+    }];
+    
+    return result;
+}

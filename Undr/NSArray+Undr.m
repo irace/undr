@@ -32,51 +32,19 @@
 }
 
 - (NSArray *)filter:(BOOL(^)(id))block {
-    NSMutableArray *result = [NSMutableArray array];
-    
-    [self enumerateObjectsUsingBlock:^(id object, NSUInteger index, BOOL *stop) {
-        if (block(object))
-            [result addObject:self];
-    }];
-    
-    return [NSArray arrayWithArray:result];
+    return filter(self, block);
 }
 
 - (NSArray *)reject:(BOOL(^)(id))block {
-    NSMutableArray *result = [NSMutableArray array];
-    
-    [self enumerateObjectsUsingBlock:^(id object, NSUInteger index, BOOL *stop) {
-        if (!block(object))
-            [result addObject:self];
-    }];
-    
-    return result;
+    return reject(self, block);
 }
 
 - (BOOL)every:(BOOL(^)(id))block {
-    __block BOOL result = YES;
-    
-    [self enumerateObjectsUsingBlock:^(id object, NSUInteger index, BOOL *stop) {
-        if (!block(object)) {
-            result = NO;
-            *stop = YES;
-        }
-    }];
-    
-    return result;
+    return every(self, block);
 }
 
 - (BOOL)some:(BOOL(^)(id))block {
-    __block BOOL result = NO;
-    
-    [self enumerateObjectsUsingBlock:^(id object, NSUInteger index, BOOL *stop) {
-        if (!block(object)) {
-            result = YES;
-            *stop = YES;
-        }
-    }];
-    
-    return result;
+    return some(self, block);
 }
 
 - (BOOL)contains:(id)value {
