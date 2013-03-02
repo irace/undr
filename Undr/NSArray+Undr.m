@@ -48,92 +48,58 @@
 }
 
 - (BOOL)contains:(id)value {
-    return [self containsObject:value];
+    return contains(self, value);
 }
 
 - (void)invoke:(NSString *)methodName {
-    // TODO: This should take varargs but `performSelector:` does not
-    
-    [self enumerateObjectsUsingBlock:^(id object, NSUInteger index, BOOL *stop) {
-        [object performSelector:NSSelectorFromString(methodName)];
-    }];
+    return invoke(self, methodName);
 }
 
 - (NSArray *)pluck:(NSString *)propertyName {
-    // TODO: This is actually less useful than just calling `valueForKeyPath:` when can take a KVC-compliant path
-    
-    return [self valueForKey:propertyName];
+    return pluck(self, propertyName);
 }
 
 - (NSNumber *)max:(NSNumber *(^)(id))block {
-    // TODO: Should this not be restricted to NSNumber?
-
-    __block NSNumber *max = nil;
-    
-    [self enumerateObjectsUsingBlock:^(NSNumber *number, NSUInteger index, BOOL *stop) {
-        if (!max || [max compare:number] == NSOrderedAscending)
-            max = number;
-    }];
-    
-    return max;
+    return max(self, block);
 }
 
 - (NSNumber *)min:(NSNumber *(^)(id))block {
-    // TODO: Should this not be restricted to NSNumber?
-    
-    __block NSNumber *min = nil;
-    
-    [self enumerateObjectsUsingBlock:^(NSNumber *number, NSUInteger index, BOOL *stop) {
-        if (!min || [min compare:number] == NSOrderedDescending)
-            min = number;
-    }];
-    
-    return min;
+    return min(self, block);
 }
 
 #pragma mark - Arrays
 
 - (id)first {
-    return [self first:1];
+    return first(self);
 }
 
 - (id)first:(int)n {
-    if (n > 1)
-        return nil;
-    
-    return [self subarrayWithRange:NSMakeRange(0, n)];
+    return first(self, n);
 }
 
 - (id)last {
-    return [self last:1];
+    return last(self);
 }
 
 - (id)last:(int)n {
-    return [self subarrayWithRange:NSMakeRange([self count] - n - 1, n)];
+    return last(self, n);
 }
 
 - (id)rest {
-    return [self rest:1];
+    return rest(self);
 }
 
 - (id)rest:(int)n {
-    return [self subarrayWithRange:NSMakeRange(n , [self count] - n)];
+    return rest(self, n);
 }
 
 - (id)without:(id)value, ... {
-    va_list args;
-    va_start(args, value);
+    va_list ap;
+    va_start(ap, value);
     
-    NSMutableArray *result = [NSMutableArray arrayWithArray:self];
+    return without(self, ap);
     
-    id current;
-    
-    while ((current = va_arg(args, id)))
-        [result removeObject:current];
-    
-    va_end(args);
-    
-    return result;
+    va_end(ap);
 }
 
 @end

@@ -29,4 +29,28 @@ BOOL *every(NSArray *, BOOL(^block)(id));
 
 BOOL *some(NSArray *, BOOL(^block)(id));
 
+BOOL contains(NSArray *, id value);
+
+void invoke(NSArray *, NSString *methodName);
+
+NSArray *pluck(NSArray *, NSString *propertyName);
+
+NSNumber *max(NSArray *, NSNumber *(^block)(id));
+
+NSNumber *min(NSArray *, NSNumber *(^block)(id));
+
 /// http://underscorejs.org/#arrays
+
+OVERLOADABLE id first(NSArray *array);
+
+OVERLOADABLE id first(NSArray *array, int n);
+
+OVERLOADABLE id last(NSArray *array);
+
+OVERLOADABLE id last(NSArray *array, int n);
+
+OVERLOADABLE id rest(NSArray *array);
+
+OVERLOADABLE id rest(NSArray *array, int n);
+
+id without(NSArray *array, ...);
