@@ -23,6 +23,10 @@ id find(NSArray *, BOOL(^block)(id));
 
 NSArray *filter(NSArray *, BOOL(^block)(id));
 
+// TODO: `where`
+
+// TODO: `findWhere`
+
 NSArray *reject(NSArray *, BOOL(^block)(id));
 
 BOOL *every(NSArray *, BOOL(^block)(id));
@@ -39,6 +43,18 @@ NSNumber *max(NSArray *, NSNumber *(^block)(id));
 
 NSNumber *min(NSArray *, NSNumber *(^block)(id));
 
+// TODO: `sortBy`
+
+// TODO: `groupBy`
+
+// TODO: `countBy`
+
+// TODO: `shuffle`
+
+// TODO: `toArray`
+
+// TODO: `size1`
+
 /// http://underscorejs.org/#arrays
 
 OVERLOADABLE id first(NSArray *array);
@@ -52,5 +68,9 @@ OVERLOADABLE id last(NSArray *array, int n);
 OVERLOADABLE id rest(NSArray *array);
 
 OVERLOADABLE id rest(NSArray *array, int n);
+
+// TODO: `compact`
+
+// TODO: `flatten`
 
 id without(NSArray *array, ...);
