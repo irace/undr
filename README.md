@@ -24,5 +24,5 @@ This library will specifically not overload Objective-C [dot syntax](http://deve
 
 Lastly, I'm hoping to port a good number of Underscore's [unit tests](https://github.com/documentcloud/underscore/tree/master/test) over, though I don't think a bunch of them apply due to the language differences.
 
-# License
+## License
 Available for use under the MIT license: [http://bryan.mit-license.org](http://bryan.mit-license.org)
